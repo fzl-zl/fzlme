@@ -837,11 +837,11 @@ textarea {
 }
 
 .open .navbar {
-	display: block
+	display: block;
 }
 
 .close .navbar {
-	display: none
+	display: none;
 }
 
 .bt-nav {
