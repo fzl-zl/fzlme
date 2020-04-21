@@ -837,11 +837,11 @@ textarea {
 }
 
 .open .navbar {
-	display: none
+	display: block
 }
 
 .close .navbar {
-	display: block
+	display: none
 }
 
 .bt-nav {
@@ -4351,6 +4351,11 @@ nav#comments-navi {
 		background: #eee;
 		width: 100%
 	}
+	.open .navbar {
+		display: none;
+	}
+	
+	
 	.close .navbar {
 		display: block;
 		height: 100%;
