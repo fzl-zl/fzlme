@@ -1637,6 +1637,7 @@ input[type="search"]::-webkit-search-decoration {
 	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1)
 }
 
+
 .review-item-creator {
 	font-size: 1em;
 	font-weight: normal;
@@ -1721,7 +1722,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .gaz-btn.primary {
-	background: #2E60C4
+	background: rgb(50, 96, 189)
 }
 
 .gaz-btn {
@@ -1736,6 +1737,8 @@ input[type="search"]::-webkit-search-decoration {
 	transition: all .2s;
 	display: inline-block
 }
+
+
 
 .pull-right {
 	float: right
@@ -6277,4 +6280,13 @@ a,
 
 [data-tooltip][tabindex="0"][data-side="right"]::before {
 	transform: translate(-50%, 50%) rotate(135deg)
+}
+.gaz-btn:hover{
+	background-color: rgb(73, 105, 209);
+}
+.review-item-title a:hover{
+	color: rgb(219, 116, 116);
+}
+.pull-right a:hover{
+	color: rgb(219, 116, 116);
 }
