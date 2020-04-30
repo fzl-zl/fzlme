@@ -1676,7 +1676,8 @@ input[type="search"]::-webkit-search-decoration {
 	transform: scale(1.2);
 	-o-object-fit: cover;
 	object-fit: cover;
-	pointer-events: none
+	pointer-events: none;
+	background-repeat:no-repeat ;
 }
 
 .bg-blur:after {
