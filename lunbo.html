@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="shortcut icon" href="statics/images/icons.png" />
+    <script src="statics/js/jquery-3.4.1.js"></script>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0px;
+        }
+        
+        #a{
+            margin: 100px auto;
+            width: 1000px;
+            height: 562.5px;
+            border: 1px solid;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 400px red;
+            border-radius: 12px;
+        }
+        #b{
+            float: left;
+            width: 7000px;
+            position: absolute;
+            font-size:0px;
+            left:-1000px;
+            
+            
+        }
+        img{
+            vertical-align:bottom;
+            width: 1000px;
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        #left{
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            position: absolute;
+            left: 10px;
+            top: 45%;
+            border-radius: 20px;
+            text-decoration: none;
+            line-height: 50px;
+            text-align: center;
+            font-size: 13px;
+            
+        }
+        #right{
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            position: absolute;
+            right: 10px;
+            top: 45%;
+            border-radius: 20px;
+            text-decoration: none;
+            line-height: 50px;
+            text-align: center;
+            font-size: 13px;
+        }
+        ul{
+            width: 110px;
+            position: absolute;
+            left: 50%;
+            bottom: 10%;
+            float: left;
+            list-style-type:none;
+        }
+        ul a{
+            float: left;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: rgba(226, 196, 196, 0.7);
+            border-radius: 50%;
+        }
+        .on{
+            background-color: red;
+        }
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: cornflowerblue;
+    overflow: hidden;
+    
+}
+.wrap{
+    
+    width: 1920px;
+    height: 1080px;
+    background-color: rgb(141, 141, 146);
+    z-index: 999;
+    
+}
+
+.loader
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    animation: animate 1s linear infinite;
+}
+.loader span
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #f00;
+    animation: rotate 1s linear infinite;
+}
+.loader span:nth-child(1)
+{
+    top: 0;
+    left: 0;
+    background: #f79f1f;
+}
+.loader span:nth-child(2)
+{
+    top: 0;
+    right: 0;
+    background: #12cbc4;
+}
+.loader span:nth-child(3)
+{
+    bottom: 0;
+    left: 0;
+    background: #ed4c67;
+}
+.loader span:nth-child(4)
+{
+    bottom: 0;
+    right: 0;
+    background: #a3cb38;
+}
+@keyframes animate
+{
+    0%
+    {
+        width: 100px;
+        height: 100px;
+    }
+    10%
+    {
+        width: 100px;
+        height: 100px;
+    }
+    50%
+    {
+        width: 150px;
+        height: 150px;
+    }
+    90%
+    {
+        width: 100px;
+        height: 100px;
+    }
+    100%
+    {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@keyframes rotate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    10%
+    {
+        transform: rotate(0deg);
+    }
+    60%
+    {
+        transform: rotate(90deg);
+    }
+    90%
+    {
+        transform: rotate(90deg);
+    }
+    100%
+    {
+        transform: rotate(90deg);
+    }
+}
+.fas{
+    font-size: 40px;
+    color: skyblue;
+}
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <div id="a">
+        <div id="b">
+            <img src="img/3.png" alt="1">
+            <img src="img/nature.png" alt="1">
+            <img src="img/nature12.png" alt="1">
+            <img src="img/nature8.png" alt="1">
+            <img src="img/naturea.png" alt="1">
+            <img src="img/3.png" alt="1">
+            <img src="img/nature.png" alt="1">
+        </div>
+        <ul>
+            <li><a href="javaacript:;" class="on"></a></li>
+            <li><a href="javaacript:;"></a></li>
+            <li><a href="javaacript:;"></a></li>
+            <li><a href="javaacript:;"></a></li>
+            <li><a href="javaacript:;"></a></li>
+        </ul>
+        <a href="javascript:;" id="left"><i class="fas fa-angle-left"></i></a>
+        <a href="javascript:;" id="right"><i class="fas fa-angle-right"></i></a>
+    </div>
+    <script>
+        var width=1000
+        var moving=false
+        
+        $('#left').click(function(){
+            //var x=$('#b').css('left')
+            clearInterval(stei)
+            page(false)
+            //$('#b').css('left',$('#b').position().left-1000)
+        })
+        $('#right').click(function(){
+            clearInterval(stei)
+           page(true)
+        })
+        $('li a').click(function(){
+            
+        })
+        //图片平滑切换
+        function page(a){
+            if(moving){
+                  return
+            }
+            moving=true
+            var cur=$('#b').position().left
+            var of=0
+            if(typeof a=="boolean"){
+                of=a?-width:width
+            }else{
+                of=(index-a)*width
+            }
+            var time=800
+            var it=4
+            var target=cur+of
+            var img=5
+            
+            clearInterval()
+            var set=setInterval(function(){
+                cur=cur+(of/(time/it))
+                if(cur==target){
+                    clearInterval(set)
+                    moving=false
+                    if(cur==-(img+1)*1000){
+                        cur=-1000
+                    }else if(cur==0){
+                        cur=-img*1000
+                    }
+                }
+                $('#b').css('left',cur)
+            },it)
+            point(a)    
+        }
+        //自动翻页
+        var stei=setInterval(function(){
+            page(true)
+        },3000)
+        //移入停止翻页 移出继续
+        $('#b').hover(function(){
+            console.log('鼠标移入')
+            clearInterval(stei)
+        },function(){
+            console.log('鼠标移出')
+            stei=setInterval(function(){
+            page(true)
+        },3000)
+        })
+        //更新原点
+        var index=0
+       function point(a){
+           var tar=0
+           if(typeof a==="boolean"){
+            if(a){
+               tar=index+1
+               if(tar==5){
+                   tar=0
+               }
+
+               }else{
+                 tar=index-1
+                 if(tar==-1){
+                     tar=4
+                 }
+             }
+           }else{
+               tar=a
+           }
+           
+           $('li a').eq(index).removeClass('on')
+           $('li a').eq(tar).addClass('on')
+            index=tar
+       }
+       $('li').click(function(){
+           clearInterval(stei)
+           var tar=$(this).index()
+           console.log(tar)
+           if(tar!==index){
+                 page(tar)
+           }
+           
+       }) 
+
+        $(function(){
+            $('.wrap').fadeOut(2000)
+        })
+    </script>
+</body>
+</html>
