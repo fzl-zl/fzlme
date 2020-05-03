@@ -6298,7 +6298,7 @@ a,
 	display: inline-block;
 	left: 50%;
 	margin-left: 40%;
-	background-color:rgb(102, 136, 199);
+	background-color:rgba(102, 136, 199,.1);
 	border-radius: 12px;
 	height: 30px;
 	width: 30px;
