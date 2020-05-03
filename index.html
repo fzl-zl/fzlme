@@ -307,10 +307,12 @@
 					$("html,body").animate({scrollTop:200}, 500);        //平滑滚动
 				})
 				$('#slowbo').click(function(){
+					$("html,body").stop()
 					$("html,body").animate({scrollTop:$('#footer').offset().top}, 2000);        //平滑滚动
 				})
 				$('#totop').click(function(){
-					
+					if($("html,body").scrollTop()!==0)
+					 $("html,body").stop()
 					$("html,body").animate({scrollTop:0}, 2000);        //平滑滚动
 				})
 
