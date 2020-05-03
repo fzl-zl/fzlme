@@ -6291,3 +6291,25 @@ a,
 .pull-right a:hover{
 	color: rgb(219, 116, 116);
 }
+#totop{
+	font-size: 30px;
+	position: fixed;
+	z-index: 99999999999;
+	display: inline-block;
+	left: 50%;
+	margin-left: 40%;
+	background-color:rgb(102, 136, 199);
+	border-radius: 12px;
+	height: 30px;
+	width: 30px;
+	bottom: 10%;
+	text-align: center;
+	line-height: 30px;
+
+}
+#totop i{
+	color: rgb(45, 209, 94);
+}
+#totop:hover i{
+	color: rgb(178, 61, 201);
+}

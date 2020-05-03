@@ -11,8 +11,10 @@
 		<link rel="shortcut icon" href="statics/images/icons.png" />
 		<link rel="stylesheet" href="css/fonts/iconfont.woff">
 		<link rel="stylesheet" href="css/fonts/Vivaldi.ttf">
+		<link rel="stylesheet" href="fontawesome/css/all.css">
 		<title>fzl</title>
 	</head>
+	
 	
 
 	<body class="home blog custom-background round-avatars">
@@ -47,30 +49,30 @@
 										<a href="index.html">首页</a>
 									</li>
 									<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173">
-										<a href="javascript:;">更新</a>
-									</li>
-									<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78">
-										<a href="javascript:;">链接</a>
+										<a href="javascript:;" id="slowskip">博客</a>
 									</li>
 									<li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-252">
 										<a href="javascript:;">归档</a>
 										<ul class="sub-menu">
 											<li id="menu-item-165" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-165">
-												<a href="">theme</a>
+												<a href="">测试</a>
 											</li>
 											<li id="menu-item-163" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-163">
-												<a href="">Happen</a>
+												<a href="">测试</a>
 											</li>
 											<li id="menu-item-924" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-924">
-												<a href="">WeWork</a>
+												<a href="">测试</a>
 											</li>
 											<li id="menu-item-164" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-164">
-												<a href="">WordPress</a>
+												<a href="">测试</a>
 											</li>
 										</ul>
 									</li>
+									<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78">
+										<a href="javascript:;" id="slowbo">联系</a>
+									</li>
 									<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57">
-										<a href="javascript:;">留言</a>
+										<a href="javascript:;">关于</a>
 									</li>
 								</ul>
 							</div>
@@ -287,11 +289,33 @@
 				Copyright&copy;2020. Design by
 				<a href=""style="color: #d7bbbb;">FZL</a>
 			</div>
+			</footer>
+			<div id="totop">
+				<a href="javascript:;"><i class="fas fa-angle-up"></i></a>
+			</div>
+			
+			
+				
+			
 			<script type='text/javascript' src='statics/js/jquery.min.js'></script>
 			<script type='text/javascript' src='statics/js/plugins.js'></script>
 			<script type='text/javascript' src='statics/js/script.js'></script>
 			<script type='text/javascript' src='statics/js/particles.js'></script>
 			<script type='text/javascript' src='statics/js/aos.js'></script>
+			<script>
+				$('#slowskip').click(function(){
+					$("html,body").animate({scrollTop:200}, 500);        //平滑滚动
+				})
+				$('#slowbo').click(function(){
+					$("html,body").animate({scrollTop:$('#footer').offset().top}, 2000);        //平滑滚动
+				})
+				$('#totop').click(function(){
+					
+					$("html,body").animate({scrollTop:0}, 2000);        //平滑滚动
+				})
+
+
+			</script>
 
 	</body>
 
